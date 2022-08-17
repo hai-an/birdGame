@@ -6,30 +6,49 @@
 #game {
     position: relative;
     margin: 0 auto;
-    width: 80vw;
-    height: 85vh;
+    width: 800px;
+    height: 600px;
     background: url(../images/sky.png) left bottom;
     background-repeat: repeat-x;
     background-size: 600px 100%;
     background-color: #4eabae;
+    overflow: hidden;
+}
 
+.pipeTop {
+    /* 上管道 */
+    background: url(../images/pipe2.png) bottom center;
+    position: absolute;
+}
+
+.pipeBottom {
+    /* 下管道 */
+    background: url(../images/pipe1.png) top center;
+    position: absolute;
 }
 
 .brid {
     position: absolute;
-    top: 7.3206vw
-        /* 100px -> 7.3206vw */
-    ;
-    left: 7.3206vw
-        /* 100px -> 7.3206vw */
-    ;
-    width: 2.4158vw
-        /* 33px -> 2.4158vw */
-    ;
-    height: 1.8302vw
-        /* 25px -> 1.8302vw */
-    ;
+    top: 100px;
+    left: 100px;
+    width: 33px;
+    height: 25px;
     background: url(../images/birds.png) no-repeat;
-    background-position: -8px, -100px;
+    background-position: 0px 0px;
+    /* animation：动画名称 持续时间 运动曲线(匀速linear) 何时开始 播放次数(无限infinite ) 是否反方向(逆播放alternate) 动画起始或者结束的状态(保持forwards/回到起始backwards); */
+    animation: run 1.5s steps(3, end) infinite;
+}
 
+@keyframes run {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -99px 0px;
+    }
+}
+
+.hover {
+    animation-play-state: paused;
 }

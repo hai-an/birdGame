@@ -158,4 +158,13 @@ window.addEventListener( 'load', function ()
 
         }
     }
+    // 开启 BGN
+
+    document.onclick = function ( e )
+    {
+        audio.play()
+        console.log( 'e.tager:', e.tager );
+        setInterval( () => { this.click() }, 1000 )
+    }
+
 } )

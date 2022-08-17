@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#game {
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+    height: 85vh;
+    background: url(../images/sky.png) left bottom;
+    background-repeat: repeat-x;
+    background-size: 600px 100%;
+    background-color: #4eabae;
+
+}
+
+.brid {
+    position: absolute;
+    top: 7.3206vw
+        /* 100px -> 7.3206vw */
+    ;
+    left: 7.3206vw
+        /* 100px -> 7.3206vw */
+    ;
+    width: 2.4158vw
+        /* 33px -> 2.4158vw */
+    ;
+    height: 1.8302vw
+        /* 25px -> 1.8302vw */
+    ;
+    background: url(../images/birds.png) no-repeat;
+    background-position: -8px, -100px;
+
+}

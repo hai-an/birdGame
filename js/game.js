@@ -51,7 +51,7 @@ window.addEventListener( 'load', function ()
         }
         // 修改小鸟的垂直位置,实现了小鸟在垂直方向上的移动
         bird.entity.style.top = bird.y + 'px'
-    }, 20 )
+    }, 40 )
 
     // 给文档添加(连续)点击事件,使小鸟的top值不断变小,然后向上升
     document.addEventListener( 'click', () => bird.speedY = -10 )
@@ -67,8 +67,8 @@ window.addEventListener( 'load', function ()
         // 计算出下管道垂直方向的位置(上管道的高度+上下管道之间的间距)
         this.bottomPipeY = this.topPipeH + 200
         // 计算出下管道的高度
-        // this.bottomPipeH = 600 - this.bottomPipeY
-        this.bottomPipeH = bigImage.offsetHeight - this.bottomPipeY
+        this.bottomPipeH = 600 - this.bottomPipeY
+        // this.bottomPipeH = bigImage.offsetHeight - this.bottomPipeY
 
         // 根据我们求出来的管道属性,来创建管道
         // 创建上管道
@@ -102,8 +102,8 @@ window.addEventListener( 'load', function ()
             // 判断的条件是x小于-52(即是管道的宽度)
             if ( that.x < -52 )
             {
-                // that.x = 800 //表示把移出的管道,放到了最右边
-                that.x = bigImage.offsetWidth //表示把移出的管道,放到了最右边
+                that.x = 800 //表示把移出的管道,放到了最右边
+                // that.x = bigImage.offsetWidth //表示把移出的管道,放到了最右边
 
             }
             // 游戏没有结束,管道才会继续移动
@@ -131,7 +131,7 @@ window.addEventListener( 'load', function ()
                 clearInterval( timer )
                 stopRun( gameOver )
             }
-        }, 10 )
+        }, 20 )
     }
     for ( let i = 0; i < 4; i++ )
     {

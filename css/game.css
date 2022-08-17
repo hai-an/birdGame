@@ -16,7 +16,8 @@
 }
 
 .pipeTop {
-    /* 上管道 */
+    /* 上管道 *
+
     background: url(../images/pipe2.png) bottom center;
     position: absolute;
 }

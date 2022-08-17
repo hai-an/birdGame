@@ -14,4 +14,12 @@ window.addEventListener( 'load', function ()
         speedX: 5,
         speedY: 0
     }
+    //
+    var timer = setInterval( move, 20 )
+    function move ()
+    {
+        sky.position = sky.position - bird.speedX
+        bigImage.style.backgroundPositionX = sky.position + 'px'
+    }
+
 } )

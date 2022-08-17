@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>封装动画函数</title>
+    <style>
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+        .box2 {
+            background-color: pink;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        // 获取事件源
+        let box = document.querySelector( '.box' )
+        box.addEventListener( 'click', function ()
+        {
+            animate( box, 800, 100, () => box.classList.add( 'box2' ) )
+            //动画(横向缓动动画)
+            //target目标位置
+            //interval间隔事件
+            //callback回调函数(可不填)
+            function animate ( obj, target, interval, callback )
+            {
+                // 开启定时器前先清除上一次的定时器
+                clearInterval( obj.timer )
+                obj.timer = setInterval( function ()
+                {
+                    // step 步长
+                    let step = ( target - box.offsetLeft ) / 10
+                    // 大于零向上取整,小于零向下取整
+                    step = step > 0 ? Math.ceil( step ) : Math.floor( step )
+                    //到目标位置停止
+                    if ( box.offsetLeft >= target )
+                    {
+                        clearInterval( obj.timer )
+                        // 有传入callback参数为真,即可调用
+                        callback && callback()
+                    }
+                    box.style.left = box.offsetLeft + step + 'px'
+
+                }, interval );
+            }
+
+
+        } )
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型</title>
+</head>
+
+<body>
+    <script>
+        // 简单数据类型
+        // Number String Null Undefined Boolean
+        // 复杂数据类型
+        // object arr
+        // 1.数字类型
+        // 最大值
+        let max = Number.MAX_VALUE
+        // 最小值
+        let min = Number.MIN_VALUE
+        // 无穷大
+        let maxs = Infinity
+        // 无穷小
+        let mins = Infinity
+        // 非数字
+        let not = NaN   //不是数字 返回true,是数字 返回false
+        // 2.字符串
+        // 转义字符 /n 换行 ,/b 空格, /t 缩进
+        //  获取字符串长度 String.length
+        //字符串(a) 与 任何非字符串(b) 相加 = 相连(ab)
+
+        // 3.Boolean布尔类型
+        let flag = true
+        let flag1 = false
+        console.log( flag + 1 ); //2 true == 1
+        console.log( flag1 + 1 ); //1  false == 0
+
+        let str
+        console.log( str + 'abc' ); //未定义 undefined
+        console.log( str + 1 ); // NaN 非数字
+
+        // 4.Undefined 和 Null
+        // variable 声明了一个变量，但是没有给该变量赋值，其默认值为undefined
+        var variable
+        console.log( variable ) // undefined
+        console.log( '你好' + variable ) // 你好undefined
+        console.log( 11 + variable ) // NaN
+        //vari 声明了一个变量，赋值为null，表示该变量中存的值为空（学习对象时，还会继续研究null ）
+        var vari = null
+        console.log( '你好' + vari ) // 你好null
+        console.log( 11 + vari ) // 11
+        console.log( true + vari ) // 1
+        // 5.获取数据类型 typeof
+        console.log( typeof '小白' );//string
+        console.log( typeof 18 ); //Number
+        console.log( typeof true ); //Boolean
+        console.log( typeof undefined );  //undefined
+        console.log( typeof null );  //object
+        // 6.字面量
+        // 数字字面量：8, 9, 10
+        // 字符串字面量：‘博学谷', "大前端“
+        // 布尔字面量：true，false
+        // 7.数据类型转换
+        //    7.1转换为字符串型
+        // toString()  let num = 1 alert(num.toString())
+        // String()     let num = 1 alert(String(num))
+        // 加号拼接字符串  var num= 1;alert(num+“我是字符串");
+        //    7.2转换为数字型
+        // parseInt(string)  转换为整数
+        // parseFloat(string)  转换为浮点数
+        // Number(string)   转换为数字型,不允许出现  非数字字符串 外的其他字符串,否则报错!
+        // JS隐式转换(- * /)
+        //    7.3转换为布尔型
+        Boolean()
+        false == '', 0, NaN, null, undefined
+        true == !false
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变量案例弹出用户名</title>
+</head>
+
+<body>
+    <script>
+        // 1.弹出输入框 把值给 myName 变量
+        let temp
+        let myName = prompt( '我叫什么名字', '张三' )
+        let youName = prompt( '你叫什么名字', '老王' )
+
+        temp = myName
+        myName = youName
+        youName = temp
+
+        // 2.输出语句
+        alert( `我叫 ==> ${ myName }` )
+        alert( `你叫 ==> ${ youName }` )
+
+
+    </script>
+</body>
+
+</html>

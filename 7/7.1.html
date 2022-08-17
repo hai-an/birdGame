@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象字面量,new Object,构造函数</title>
+</head>
+
+<body>
+    <script>
+        // 利用 构造函数 创建对象
+        // 一种特殊的函数,主要用来初始化对象,即为对象成员变量赋值,他总与new运算符一起使用
+        // 1.构造函数的首字母要大写
+        // 2.函数类的属性和方法需要添加this,表示当前对象的属性和方法
+        // 3.构造函数中不需要return返回结果
+        // 4.但我们创建对象的时候,必须用new来调用构造函数
+        function Person ( uname, age, sex )
+        {
+            this.name = uname
+            this.age = age
+            this.sex = sex
+            this.sayHi = function ( str )
+            {
+                console.log( str )
+
+            }
+        }
+        let zs = new Person( 'zhangsan', 18, '男' )
+        console.log( zs.name )
+        console.log( zs[ 'sex' ] )
+        zs.sayHi( 'hello' )
+
+        let lisi = new Person( 'lisi', 19, '男' )
+        console.log( lisi.name )
+        console.log( lisi[ 'age' ] )
+        lisi.sayHi( 'hello!!!!!!!!!' )
+        // 利用new Object一个空的对象
+        let person = new Obect();
+        person.name = 'zhangsan';
+        andy.age = 18;
+        andy.sex = '男';
+        andy.sayHi = function ()
+        {
+            alert( '大家好啊~' );
+        }
+        // 利用字面量创建对象
+        let persons = {
+            name: `zhangsan`,
+            age: 18,
+            sex: '男',
+            sayHi: function ()
+            {
+                alert( '大家好啊~' );
+            }
+        };
+    </script>
+</body>
+
+</html>

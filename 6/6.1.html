@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+</head>
+
+<body>
+    <script>
+        // 封装翻转数组
+        function flipArray ( arr )
+        {
+            let newArr = []
+            for ( let i = arr.length - 1; i >= 0; i-- )
+            {
+                newArr[ newArr.length ] = arr[ i ]
+            }
+            return newArr;
+
+        }
+        let arr = flipArray( [ 1, 5, 78, 94, 32, 33 ] )
+        console.log( arr );
+
+        // 判断闰年
+        function getYear ()
+        {
+            // 拿到用户输入的年份
+            let year = prompt( '请输入年份,判断是否是闰年' )
+            if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
+            {
+                return alert( `你输入年份${ year }是闰年` )
+            }
+            return alert( `你输入年份${ year }是平年` )
+
+        }
+        getYear()
+    </script>
+</body>
+
+</html>

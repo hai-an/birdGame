@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+</head>
+
+<body>
+    <script>
+        //1. 查找字符串"abcoefoxyozzopp"中所有o出现的位置以及次数
+        /*    let str = 'oabcoefoxyozzopp'
+           let count = 0
+           let index = str.indexOf( 'o' )
+
+           while ( index !== -1 )
+           {
+               console.log( index )
+               // 统计出现次数
+               count++
+               // 每次的索引给前面的数
+               index = str.indexOf( 'o', index + 1 )
+
+           }
+           console.log( "o出现的次数是:" + count ) */
+        // 2.判断一个字符串 ‘abcoefoxyozzopp’ 中出现次数最多的字符，并统计其次数。
+        // 思路: 1.第一次搜索(出现的)的赋值为1 ,其余次数自+1
+        //       2.放进o对象里面 属性名= 字符串 , 属性值 = 出现的次数
+        let Str = 'abcoefoxyozzopp'
+        const o = {}
+        for ( let i = 0; i < Str.length; i++ )
+        {
+            // const element = Str[i]
+            let charAt = Str.charAt( i )
+            if ( o[ charAt ] )
+            {
+                o[ charAt ]++
+            } else
+            {
+                o[ charAt ] = 1
+            }
+        }
+        let maxCharAt = 0  // 出现最多的字符 名
+        let num = 0// 出现的最大次数
+        console.log( o );
+        for ( const k in o )
+        {
+            // k 属性名
+            // o[k] 属性的值
+            if ( o[ k ] > num )
+            {
+                // console.log( o[ k ] )
+                // 出现的最大次数
+                num = o[ k ]
+                // 出现最多的字符 名
+                maxCharAt = k
+            }
+        }
+        console.log( `出现最多的字符是${ maxCharAt },出现的次数是${ num }` );
+
+    </script>
+</body>
+
+</html>

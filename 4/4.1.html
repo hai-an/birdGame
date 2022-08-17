@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>运算符</title>
+</head>
+
+<body>
+    <script>
+        // 自增运算符 ++a a-- a++ a--
+        // 比较运算符 > >= < <= !=不等 !==不全等 = == ===
+        // console.log( 2 !== 3 );
+        // 逻辑运算符 &&逻辑或 ||逻辑与 !逻辑非
+        // && 一假全假
+        // || 一真全真
+        // ! 取反
+        // 赋值运算符  += -= /= *= %=
+        // 运算符优先级
+        // 小括号 一元     算数   关系              相等         逻辑        赋值 逗号
+        // () > ++--! > 先*/%后+- > ><>=<= > == != === !== > 先&&后|| >   =   > ,
+
+        // 打印倒三角形
+        let str = '☆'
+        for ( let i = 0; i < 10; i++ )
+        {
+            for ( let j = i; j < 10; j++ )
+            {
+                str += '☆'
+            }
+            str += '\n'
+        }
+        console.log( str )
+        // 打印正三角形
+        let str2 = '☆'
+        for ( let i = 0; i < 10; i++ )
+        {
+            for ( let j = 1; j <= i; j++ )
+            {
+                str2 += '☆'
+            }
+            str2 += '\n'
+        }
+        console.log( str2 )
+        // 九九乘法表
+        let table = ''
+        for ( let i = 1; i <= 9; i++ )
+        {
+            for ( let j = 1; j <= i; j++ )
+            {
+                // 1= 1 x 1
+                // 2= 1 x 2
+                table += j + 'x' + i + '=' + j * i + '\t'
+            }
+            table += '\n'
+        }
+        console.log( table )
+
+    </script>
+</body>
+
+</html>

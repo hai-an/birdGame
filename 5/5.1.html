@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+</head>
+
+<body>
+    <script>
+        // 案例1
+        // 案例2 把数组[2,0,6,1,77,0,52,0,25,7]大于等于10的选出来,放到新数组
+        let arr = [ 2, 0, 6, 1, 77, 0, 52, 0, 25, 7 ]
+        let newArr = []
+        for ( let i = 0; i < arr.length; i++ )
+        {
+
+            if ( arr[ i ] >= 10 )
+            {
+                newArr[ newArr.length ] = arr[ i ]
+            }
+        }
+        console.log( newArr )
+
+    </script>
+</body>
+
+</html>
